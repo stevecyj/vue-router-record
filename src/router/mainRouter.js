@@ -71,4 +71,16 @@ export default [
       },
     ],
   },
+  {
+    // 404頁面
+    path: '/:pathMatch(.*)',
+    component: () => import(/* webpackChunkName: "NotFound" */ '../views/NotFound.vue'),
+  },
+  {
+    // 特定路由重新導向
+    path: '/newPage/:pathMatch(.*)',
+    redirect: {
+      name: 'Home',
+    },
+  },
 ];
