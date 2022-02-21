@@ -18,5 +18,15 @@ export default [
     path: '/newpage',
     name: 'NewPage',
     component: () => import(/* webpackChunkName: "newpage" */ '../views/NewPage.vue'),
+    children: [
+      {
+        path: 'a',
+        component: () => import(/* webpackChunkName: "a" */ '../views/componentA.vue'),
+      },
+      {
+        path: 'b',
+        component: () => import(/* webpackChunkName: "b" */ '../views/componentB.vue'),
+      },
+    ],
   },
 ];
