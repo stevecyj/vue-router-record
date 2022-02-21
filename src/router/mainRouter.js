@@ -28,6 +28,10 @@ export default [
         component: () => import(/* webpackChunkName: "b" */ '../views/componentB.vue'),
       },
       {
+        path: 'dynamicRouter/:id',
+        component: () => import(/* webpackChunkName: "DynamicRouter" */ '../views/DynamicRouter.vue'),
+      },
+      {
         path: 'namedView',
         name: 'NamedView',
         component: () => import(/* webpackChunkName: "namedView" */ '../views/NamedView.vue'),
