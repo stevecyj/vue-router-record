@@ -15,6 +15,7 @@ cd dist
 git init
 git add -A
 git commit -m 'deploy'
+git branch -M main
 
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
