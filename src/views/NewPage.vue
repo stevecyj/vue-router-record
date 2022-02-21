@@ -20,6 +20,27 @@
         >
           命名視圖 a2b
         </router-link>
+        <router-link
+          to="/newpage/dynamicRouter/d74c3705677f9dfb"
+          href="#"
+          class="list-group-item list-group-item-action"
+        >
+          動態路由($route)
+        </router-link>
+        <router-link
+          to="/newpage/dynamicRouterByProps/d74c3705677f9dfb"
+          href="#"
+          class="list-group-item list-group-item-action"
+        >
+          動態路由(props)
+        </router-link>
+        <router-link
+          to="/newpage/routerNavigation"
+          href="#"
+          class="list-group-item list-group-item-action"
+        >
+          Router Navigation
+        </router-link>
       </div>
     </div>
     <div class="col-8">

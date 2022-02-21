@@ -29,17 +29,24 @@ export default [
       },
       {
         path: 'dynamicRouter/:id',
-        component: () => import(/* webpackChunkName: "DynamicRouter" */ '../views/DynamicRouter.vue'),
+        component: () =>
+          import(/* webpackChunkName: "DynamicRouter" */ '../views/DynamicRouter.vue'),
       },
       {
         path: 'dynamicRouterByProps/:id',
-        component: () => import(/* webpackChunkName: "DynamicRouter" */ '../views/DynamicRouterByProps.vue'),
+        component: () =>
+          import(/* webpackChunkName: "DynamicRouter" */ '../views/DynamicRouterByProps.vue'),
         props: (route) => {
           console.log('route', route);
           return {
             id: route.params.id,
           };
         },
+      },
+      {
+        path: 'routerNavigation',
+        component: () =>
+          import(/* webpackChunkName: "RouterNavigation" */ '../views/RouterNavigation.vue'),
       },
       {
         path: 'namedView',
