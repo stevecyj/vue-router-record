@@ -27,6 +27,27 @@ export default [
         path: 'b',
         component: () => import(/* webpackChunkName: "b" */ '../views/componentB.vue'),
       },
+      {
+        path: 'namedView',
+        name: 'NamedView',
+        component: () => import(/* webpackChunkName: "namedView" */ '../views/NamedView.vue'),
+        children: [
+          {
+            path: 'c2a',
+            components: {
+              left: () => import(/* webpackChunkName: "left" */ '../views/componentC.vue'),
+              right: () => import(/* webpackChunkName: "right" */ '../views/componentA.vue'),
+            },
+          },
+          {
+            path: 'a2b',
+            components: {
+              left: () => import(/* webpackChunkName: "left" */ '../views/componentA.vue'),
+              right: () => import(/* webpackChunkName: "right" */ '../views/componentB.vue'),
+            },
+          },
+        ],
+      },
     ],
   },
 ];

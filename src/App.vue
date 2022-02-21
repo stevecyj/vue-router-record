@@ -24,6 +24,9 @@
           <li class="nav-item">
             <router-link :to="{ name: 'NewPage' }" class="nav-link">New Page</router-link>
           </li>
+          <li class="nav-item">
+            <router-link :to="{ name: 'NamedView' }" class="nav-link">Named View Page</router-link>
+          </li>
         </ul>
       </div>
     </div>
